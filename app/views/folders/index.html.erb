@@ -1,0 +1,13 @@
+<%= link_to "新規投稿ページへ", new_folder_path %>
+<div class="folders-container">
+  <% @folders.each do |t| %>
+  <div class="folder">
+    
+    <%= t.user.email %>
+    
+    <%= t.folder %>
+    <%= t.created_at %>
+    <%= link_to "詳細へ", folder_path(t.id) %>
+  </div>
+  <% end %>
+</div>

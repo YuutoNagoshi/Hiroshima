@@ -1,0 +1,7 @@
+<%= form_for @folder do |f| %>
+    <div class="field">
+      <%= f.label :folder %>
+      <%= f.text_field :folder, :size => 140 %>
+    </div>
+    <%= f.submit "追加する" %>
+  <% end %>
