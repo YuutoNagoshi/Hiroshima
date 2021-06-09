@@ -6,8 +6,25 @@
     <%= t.user.email %>
     
     <%= t.folder %>
-    <%= t.created_at %>
     <%= link_to "詳細へ", folder_path(t.id) %>
   </div>
   <% end %>
 </div>
+
+<div class="sheets-container">
+  <% @sheets.each do |t| %>
+    <div class="sheet">
+      <%= t.title %>
+      <%= t.body %>
+    </div>
+  <% end %>
+</div>
+
+<div class="links-container">
+  <% @links.each do |t| %>
+    <div class="link">
+      <%= t.link %>
+    </div>
+  <% end %>
+</div>
+

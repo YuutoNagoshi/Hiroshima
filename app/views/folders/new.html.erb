@@ -5,3 +5,22 @@
     </div>
     <%= f.submit "追加する" %>
   <% end %>
+
+  <%= form_for @sheet do |f| %>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title, :size => 140 %>
+      <%= f.label :body %>
+      <%= f.text_field :body, :size => 140 %>
+    </div>
+    <%= f.submit "追加する" %>
+  <% end %>
+
+  <%= form_for @link do |f| %>
+    <div class="field">
+      <%= f.label :link %>
+      <%= f.text_field :link, :size => 140 %>
+    </div>
+    <%= f.submit "追加する" %>
+  <% end %>
+

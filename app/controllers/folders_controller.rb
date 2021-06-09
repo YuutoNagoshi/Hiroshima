@@ -2,10 +2,15 @@ class FoldersController < ApplicationController
   before_action :authenticate_user!
     def index
       @folders = Folder.all
+      @sheets = Sheet.all
+      @links = Link.all
     end 
     
     def new
       @folder = Folder.new
+      @sheet = Sheet.new
+      @link = Link.new
+
     end
 
     def create
@@ -20,6 +25,7 @@ class FoldersController < ApplicationController
         end
       end
     
+
     def show
         @folder = Folder.find(params[:id])
     end
