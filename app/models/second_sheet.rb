@@ -1,0 +1,2 @@
+class SecondSheet < ApplicationRecord
+end

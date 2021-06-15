@@ -1,0 +1,2 @@
+class SecondFolder < ApplicationRecord
+end

@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :folders
   resources :sheets
   resources :links
+  resources :second_folders
+  resources :socond_sheets
   root 'folders#index'
 end
