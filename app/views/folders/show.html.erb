@@ -1,27 +1,17 @@
 <h3>詳細</h3>
 <div class="folder">
   <p><%= @folder.folder %></p>
-  <p><%= @folder.created_at %></p>
 </div>
 
 <%= link_to "一覧に戻る", folders_path %>
 
-<%= form_for @second_folder do |f| %>
-  <div class="field">
-    <%= f.label :two_title %>
-    <%= f.text_field :two_title, :size => 140 %>
-    <%= f.label :two_body %>
-    <%= f.text_field :two_body, :size => 140 %>
-  </div>
-  <%= f.submit "追加する" %>
-<% end %>
+<%= link_to "新規投稿ページへ", new_folder_second_folder_path(@folder.id) %>
 
 <div class="second_folders-container">
   <% @second_folders.each do |t| %>
     <div class="second_folder">
       <%= t.two_title %>
       <%= t.two_body %>
-      <%= link_to "詳細へ", second_folder_path %>
     </div>
   <% end %>
 </div>
