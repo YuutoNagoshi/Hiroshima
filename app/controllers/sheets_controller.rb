@@ -7,8 +7,7 @@ class SheetsController < ApplicationController
     
     def create
     　sheet = Sheet.new(sheet_params)
-      
-      
+    
        if sheet.save
          redirect_to :action => "index"
        else
@@ -16,9 +15,8 @@ class SheetsController < ApplicationController
        end 
     end
 
-   
     private
     def sheet_params
-      params.require(:sheet).permit(:title, :body)
+        params.require(:sheet).permit(:title, :body)
     end
 end

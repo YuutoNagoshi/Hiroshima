@@ -6,9 +6,9 @@ Rails.application.routes.draw do
    resources :socond_sheets
   end
   
-  resources :sheets do
+  resources :sheets
    
-  end
+  
   resources :links
   
   root 'folders#index'
