@@ -1,0 +1,17 @@
+<h3>詳細</h3>
+<div class="sheet">
+  <p><%= @sheet.sheet %></p>
+</div>
+
+<%= link_to "一覧に戻る", folders_path %>
+
+<%= link_to "新規投稿ページへ", new_folder_second_sheet_path(@sheet.id) %>
+
+<div class="second_sheets-container">
+  <% @second_sheetrs.each do |t| %>
+    <div class="second_sheet">
+      <%= t.two_title %>
+      <%= t.two_body %>
+    </div>
+  <% end %>
+</div>

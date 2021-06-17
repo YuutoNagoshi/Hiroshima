@@ -16,6 +16,7 @@
     <div class="sheet">
       <%= t.title %>
       <%= t.body %>
+      <%= link_to "詳細へ", sheet_path(t.id) %>
     </div>
   <% end %>
 </div>
@@ -24,6 +25,7 @@
   <% @links.each do |t| %>
     <div class="link">
       <%= t.link %>
+      <%= link_to "詳細へ", link_path(t.id) %>
     </div>
   <% end %>
 </div>
