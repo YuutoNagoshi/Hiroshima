@@ -8,7 +8,7 @@
 <%= link_to "新規投稿ページへ", new_folder_second_sheet_path(@sheet.id) %>
 
 <div class="second_sheets-container">
-  <% @second_sheetrs.each do |t| %>
+  <% @second_sheets.each do |t| %>
     <div class="second_sheet">
       <%= t.two_title %>
       <%= t.two_body %>

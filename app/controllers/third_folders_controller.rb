@@ -1,0 +1,2 @@
+class ThirdFoldersController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class ThirdFolder < ApplicationRecord
+end

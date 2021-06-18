@@ -14,6 +14,10 @@ class SecondFoldersController < ApplicationController
     @second_folder = SecondFolder.new
    end
 
+   def show
+  
+   end  
+
    private
 
       def second_folder_params

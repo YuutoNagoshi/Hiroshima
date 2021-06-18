@@ -6,10 +6,10 @@ class SheetsController < ApplicationController
     end
     
     def create
-    　sheet = Sheet.new(sheet_params)
-    
-       if sheet.save
-         redirect_to :action => "index"
+       sheet = Sheet.new(sheet_params)
+       sheet.user_id = current_user.id
+       if sheet.save!
+         redirect_to folders_path
        else
          redirect_to :action => "new"
        end 
