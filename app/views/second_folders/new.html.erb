@@ -7,4 +7,13 @@
       <%= f.text_field :two_body, :size => 140 %>
     </div>
     <%= f.submit "追加する" %>
-  <% end %>
+<% end %>
+
+<%= form_for(@second_sheet, url: {controller: 'second_sheets', action: 'create' }) do |f| %>
+      <div class="field">
+        <%= f.label :two_title %>
+        <%= f.text_field :two_title, :size => 140 %>
+       
+      </div>
+      <%= f.submit "追加する" %>
+<% end %>

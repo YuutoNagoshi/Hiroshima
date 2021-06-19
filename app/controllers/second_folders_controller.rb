@@ -10,12 +10,15 @@ class SecondFoldersController < ApplicationController
      end
    end
 
+   
    def new
     @second_folder = SecondFolder.new
+    @second_sheet = SecondSheet.new
    end
 
    def show
-  
+    @second_folder = SecondFolder.find(params[:id])
+    @third_folders = ThirdFolder.where(second_folder_id: @second_folder.id, user_id: @second_folder.user_id)
    end  
 
    private

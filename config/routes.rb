@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :folders do
    resources :second_folders
-   resources :socond_sheets
+   resources :second_sheets
    resources :third_folders
   end
   

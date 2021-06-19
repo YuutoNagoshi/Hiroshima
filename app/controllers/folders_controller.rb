@@ -29,7 +29,8 @@ class FoldersController < ApplicationController
         @folder = Folder.find(params[:id])
         @second_folder = SecondFolder.new
         @second_folders = SecondFolder.where(folder_id: @folder.id, user_id: @folder.user_id)
-       
+        @second_sheet = SecondSheet.new
+        @second_sheets = SecondSheet.where(folder_id: @folder.id, user_id: @folder.user_id)
     end
       private
     def folder_params

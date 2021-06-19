@@ -6,6 +6,7 @@ class CreateThirdFolders < ActiveRecord::Migration[6.1]
       t.string :three_image
       t.integer :user_id
       t.integer :folder_id
+      t.integer :second_folder_id
       t.string :string
 
       t.timestamps

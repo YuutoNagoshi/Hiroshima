@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2021_06_18_111602) do
     t.string "three_image"
     t.integer "user_id"
     t.integer "folder_id"
+    t.integer "second_folder_id"
     t.string "string"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
