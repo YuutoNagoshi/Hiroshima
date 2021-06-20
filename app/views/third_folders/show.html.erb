@@ -4,6 +4,7 @@
   <p><%= @third_folder.three_body %></p>
   <p><%= @third_folder.three_image %></p>
   <p><%= @third_folder.created_at %></p>
+  <%= image_tag t.three_image_url, size: "250x200" if t.three_image? %>
 </div>
 
 <%= link_to "一覧に戻る", folders_path %>

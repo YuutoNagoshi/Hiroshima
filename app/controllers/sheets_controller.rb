@@ -17,6 +17,6 @@ class SheetsController < ApplicationController
 
     private
     def sheet_params
-        params.require(:sheet).permit(:title, :body)
+        params.require(:sheet).permit(:title, :body, :image)
     end
 end

@@ -10,7 +10,8 @@
     <div class="field">
       <%= f.label :title %>
       <%= f.text_field :title, :size => 140 %>
-     
+      <%= f.label :image %>
+      <%= f.file_field :image %>
     </div>
     <%= f.submit "追加する" %>
   <% end %>

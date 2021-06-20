@@ -11,6 +11,7 @@
     <div class="third_folder">
       <%= t.three_title %>
       <%= t.three_body %>
+      <%= image_tag t.three_image_url, size: "250x200" if t.three_image? %>
     </div>
   <% end %>
 </div>

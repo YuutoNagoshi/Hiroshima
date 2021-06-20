@@ -24,7 +24,7 @@ class SecondFoldersController < ApplicationController
    private
 
       def second_folder_params
-        params.require(:second_folder).permit(:two_title, :two_body)
+        params.require(:second_folder).permit(:two_title, :two_body, :two_image)
       end
     
 end
