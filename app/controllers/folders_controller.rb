@@ -4,6 +4,7 @@ class FoldersController < ApplicationController
       @folders = Folder.where(user_id: current_user.id)
       @sheets = Sheet.where(user_id: current_user.id)
       @links = Link.all 
+
     end 
     
     def new

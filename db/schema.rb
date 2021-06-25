@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_18_111602) do
+ActiveRecord::Schema.define(version: 2021_06_23_131609) do
 
   create_table "folders", force: :cascade do |t|
     t.string "folder"
@@ -63,6 +63,17 @@ ActiveRecord::Schema.define(version: 2021_06_18_111602) do
     t.integer "folder_id"
     t.integer "second_folder_id"
     t.string "string"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "third_sheets", force: :cascade do |t|
+    t.string "three_title"
+    t.string "three_body"
+    t.string "three_image"
+    t.integer "user_id"
+    t.integer "folder_id"
+    t.integer "second_folder_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,0 +1,9 @@
+<%= form_for(@third_sheet, url: {controller: 'third_folders', action: 'create' }) do |f| %>
+    <div class="field">
+      <%= f.label :three_title %>
+      <%= f.text_field :three_title, :size => 140 %>
+      <%= f.label :three_image %>
+      <%= f.file_field :three_image %>
+    </div>
+    <%= f.submit "追加する" %>
+<% end %>

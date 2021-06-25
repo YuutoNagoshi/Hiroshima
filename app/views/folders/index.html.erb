@@ -1,12 +1,14 @@
-<%= link_to "新規投稿ページへ", new_folder_path %>
+<button type="button" class="btn btn-info"><%= link_to "新規投稿ページへ", new_folder_path %></button>
 <div class="folders-container">
   <% @folders.each do |t| %>
   <div class="folder">
-    
-    <%= t.user.email %>
-    
-    <%= t.folder %>
-    <%= link_to "詳細へ", folder_path(t.id) %>
+   <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> <%= t.folder %></h5>
+      <button type="button" class="btn btn-success"><%= link_to "詳細へ", folder_path(t.id) %></button> 
+    </div>
+   </div>
   </div>
   <% end %>
 </div>
@@ -14,18 +16,16 @@
 <div class="sheets-container">
   <% @sheets.each do |t| %>
     <div class="sheet">
-      <%= t.title %>
-      <%= t.body %>
+      
       <%= image_tag t.image_url, size: "250x200" if t.image? %>
-    </div>
-  <% end %>
-</div>
-
-<div class="links-container">
-  <% @links.each do |t| %>
-    <div class="link">
-      <%= t.link %>
-      <%= link_to "詳細へ", link_path(t.id) %>
+      <div class="card" style="width: 18rem;">
+       <img src="..." class="card-img-top" alt="...">
+       <div class="card-body">
+         <h5 class="card-title"><%= t.title %>
+         <%= t.body %>
+         <%= image_tag t.image_url, size: "250x200" if t.image? %></h5>
+       </div>
+      </div>
     </div>
   <% end %>
 </div>
