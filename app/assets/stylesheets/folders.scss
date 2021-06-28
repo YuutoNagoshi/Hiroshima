@@ -1,4 +1,26 @@
 // Place all the styles related to the folders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.btn btn-info名{ color:white ;}
+
+
+
+.box1 {
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.card {
+    margin: 0 auto;
+    text-align: center;
+   
+}
+
+.card{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #14181f;
+    background: #5e656b;
+    border-bottom: solid 6px #1a1b1b;
+    box-shadow: 0 3px 6px rgba(221, 217, 217, 0.25);
+    border-radius: 9px;
+}

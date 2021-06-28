@@ -1,32 +1,39 @@
-<button type="button" class="btn btn-info"><%= link_to "新規投稿ページへ", new_folder_path %></button>
+<button type="button" class="btn btn-light"><%= link_to "新規投稿ページへ", new_folder_path %></button>
+
 <div class="folders-container">
-  <% @folders.each do |t| %>
-  <div class="folder">
-   <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title"> <%= t.folder %></h5>
-      <button type="button" class="btn btn-success"><%= link_to "詳細へ", folder_path(t.id) %></button> 
-    </div>
-   </div>
+  <div class="row">
+   
+      <% @folders.each do |t| %>
+        <div class="col-sm-4 box1">
+          <div class="folder">
+            <div class="card text-white mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><%= t.folder %></h5>
+              <button type="button" class="btn btn-light"><%= link_to "詳細へ", folder_path(t.id) %></button> 
+            </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
   </div>
-  <% end %>
 </div>
 
 <div class="sheets-container">
+  <div class="row">
+
   <% @sheets.each do |t| %>
-    <div class="sheet">
-      
-      <%= image_tag t.image_url, size: "250x200" if t.image? %>
-      <div class="card" style="width: 18rem;">
-       <img src="..." class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title"><%= t.title %>
-         <%= t.body %>
-         <%= image_tag t.image_url, size: "250x200" if t.image? %></h5>
-       </div>
+    <div class="col-sm-4 box1">
+      <div class="sheet">
+    
+      <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><%= t.title %></h5>
+              <%= t.body %>
+              <%= image_tag t.image_url, size: "250x200" if t.image? %></h5>
+            </div>
+          </div>
       </div>
-    </div>
+    </div>  
   <% end %>
 </div>
 

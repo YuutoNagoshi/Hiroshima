@@ -1,6 +1,6 @@
 <h3>詳細</h3>
 <div class="folder">
-  <p><%= @folder.folder %></p>
+  <p class="text-light bg-dark"><%= @folder.folder %></p>
 </div>
 
 <button type="button" class="btn btn-danger"><%= link_to "一覧に戻る", folders_path %></button>
@@ -9,33 +9,39 @@
 
 
 <div class="second_folders-container">
-  <% @second_folders.each do |t| %>
-    <div class="second_folder">
-      <div class="card" style="width: 18rem;">
-       <img src="..." class="card-img-top" alt="...">
-       <div class="card-body">
-        <h5 class="card-title">  <%= t.two_title %>
-        <%= t.two_body %></h5>
-        <button type="button" class="btn btn-success"><a href="#" class="btn btn-primary"><%= link_to "詳細へ", folder_second_folder_path(@folder.id, t.id ) %></a></button> 
-      </div>
-     </div>
-      
-    </div>
-  <% end %>
-</div>
-
-<div class="second_sheets-container">
-  <% @second_sheets.each do |t| %>
-    <div class="second_sheet">     
-      
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-         <h5 class="card-title"><%= t.two_title %>
-         <%= t.two_body %>
-         <%= image_tag t.two_image_url, size: "250x200" if t.two_image? %></h5>  
+  <div class="row">
+   <% @second_folders.each do |t| %>
+    <div class="col-sm-4 box1">
+      <div class="second_folder">
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">  <%= t.two_title %>
+            <%= t.two_body %></h5>
+            <button type="button" class="btn btn-light"><%= link_to "詳細へ", folder_second_folder_path(@folder.id, t.id ) %></a></button> 
+          </div>
         </div>
       </div>
     </div>
-  <% end %>
+   <% end %>
+  </div> 
+</div>
+
+
+<div class="second_sheets-container">
+  <div class="row">
+     <% @second_sheets.each do |t| %>
+      <div class="col-sm-4 box1">
+        <div class="second_sheet">     
+      
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title"><%= t.two_title %>
+            <%= t.two_body %>
+            <%= image_tag t.two_image_url, size: "250x200" if t.two_image? %></h5>  
+            </div>
+          </div>
+        </div>
+      </div> 
+     <% end %>
+  </div>
 </div>
