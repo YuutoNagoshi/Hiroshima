@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-light"><%= link_to "新規投稿ページへ", new_folder_path %></button>
+<button type="button" class="btn btn-secondary"><%= link_to "新規投稿ページへ", new_folder_path %></button>
 
 <div class="folders-container">
   <div class="row">
@@ -9,7 +9,7 @@
             <div class="card text-white mb-3" style="max-width: 18rem;">
             <div class="card-body">
               <h5 class="card-title"><%= t.folder %></h5>
-              <button type="button" class="btn btn-light"><%= link_to "詳細へ", folder_path(t.id) %></button> 
+              <button type="button" class="btn btn-secondary"><%= link_to "詳細", folder_path(t.id) %></button> 
             </div>
             </div>
           </div>
@@ -25,7 +25,7 @@
     <div class="col-sm-4 box1">
       <div class="sheet">
     
-      <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+      <div class="card text-white #3a3e41 mb-3" style="max-width: 18rem;">
             <div class="card-body">
               <h5 class="card-title"><%= t.title %></h5>
               <%= t.body %>

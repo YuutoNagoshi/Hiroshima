@@ -1,11 +1,11 @@
-<h3>詳細</h3>
+
+<button type="button" class="btn btn-secondary"><%= link_to "一覧に戻る", folders_path %></button>
+
+<button type="button" class="btn btn-secondary"><%= link_to "内容投稿ページへ", new_folder_second_folder_path(@folder.id) %></button>
+
 <div class="folder">
   <p class="text-light bg-dark"><%= @folder.folder %></p>
 </div>
-
-<button type="button" class="btn btn-danger"><%= link_to "一覧に戻る", folders_path %></button>
-
-<button type="button" class="btn btn-warning"><%= link_to "内容投稿ページへ", new_folder_second_folder_path(@folder.id) %></button>
 
 
 <div class="second_folders-container">
@@ -13,11 +13,11 @@
    <% @second_folders.each do |t| %>
     <div class="col-sm-4 box1">
       <div class="second_folder">
-        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+        <div class="card text-white mb-3" style="max-width: 18rem;">
           <div class="card-body">
             <h5 class="card-title">  <%= t.two_title %>
             <%= t.two_body %></h5>
-            <button type="button" class="btn btn-light"><%= link_to "詳細へ", folder_second_folder_path(@folder.id, t.id ) %></a></button> 
+            <button type="button" class="btn btn-secondary"><%= link_to "詳細", folder_second_folder_path(@folder.id, t.id ) %></a></button> 
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
       <div class="col-sm-4 box1">
         <div class="second_sheet">     
       
-          <div class="card" style="width: 18rem;">
+        <div class="card text-white mb-3" style="max-width: 18rem;">
             <div class="card-body">
             <h5 class="card-title"><%= t.two_title %>
             <%= t.two_body %>

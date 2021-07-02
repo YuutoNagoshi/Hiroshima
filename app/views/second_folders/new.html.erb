@@ -1,3 +1,7 @@
+<button type="button" class="btn btn-secondary"><%= link_to "一覧に戻る", folders_path %></button>
+<button type="button" class="btn btn-secondary"><%= link_to "ひとつ前に戻る", 'javascript:history.back()' %></button>
+
+
 <%= form_for(@second_folder, url: {controller: 'second_folders', action: 'create' }) do |f| %>
 
     <div class="field">
@@ -18,3 +22,4 @@
       </div>
       <%= f.submit "追加する" %>
 <% end %>
+

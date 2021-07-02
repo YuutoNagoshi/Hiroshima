@@ -1,6 +1,6 @@
-<h3>詳細</h3>
-<button type="button" class="btn btn-light"><%= link_to "一覧に戻る", folders_path %></button>
-<button type="button" class="btn btn-light"><%= link_to "追加",   new_folder_second_folder_third_folder_path(params[:folder_id], @second_folder.id) %></button>
+<button type="button" class="btn btn-secondary"><%= link_to "一覧に戻る", folders_path %></button>
+<button type="button" class="btn btn-secondary"><%= link_to "ひとつ前に戻る", 'javascript:history.back()' %></button>
+<button type="button" class="btn btn-secondary"><%= link_to "追加",   new_folder_second_folder_third_folder_path(params[:folder_id], @second_folder.id) %></button>
 
 <div class="second_folder">
   <p class="text-light bg-dark"><%= @second_folder.two_title %></p>
@@ -16,7 +16,7 @@
       <% @third_sheets.each do |t| %>
         <div class="col-sm-4 box1">
             <div class="third_sheet"> 
-              <div class="card" style="width: 18rem;">
+            <div class="card text-white mb-3" style="max-width: 18rem;">
                 <div class="card-body">    
                 <h5 class="card-title"><%= t.three_title %></h5>
                 <%= t.three_body %>
