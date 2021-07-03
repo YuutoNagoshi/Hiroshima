@@ -1,25 +1,29 @@
 <button type="button" class="btn btn-secondary"><%= link_to "一覧に戻る", folders_path %></button>
 <button type="button" class="btn btn-secondary"><%= link_to "ひとつ前に戻る", 'javascript:history.back()' %></button>
 
-
+<div class="new">
 <%= form_for(@second_folder, url: {controller: 'second_folders', action: 'create' }) do |f| %>
 
     <div class="field">
-      <%= f.label :two_title %>
-      <%= f.text_field :two_title, :size => 140 %>
-      <%= f.label :two_image %>
-      <%= f.file_field :two_image %>
+      <%= f.label :"第何回目", class: 'label-title' %>
+      <%= f.text_field :two_title, class: 'form' %>
+    </div> 
+    <div class="field">
+      <%= f.label :"写真", class: 'label-title'  %>
+      <%= f.file_field :two_image, class: 'label-title' %>
     </div>
     <%= f.submit "追加する" %>
 <% end %>
 
 <%= form_for(@second_sheet, url: {controller: 'second_sheets', action: 'create' }) do |f| %>
       <div class="field">
-        <%= f.label :two_title %>
-        <%= f.text_field :two_title, :size => 140 %>
-        <%= f.label :two_image %>
-        <%= f.file_field :two_image %>
+        <%= f.label :"タイトル", class: 'label-title' %>
+        <%= f.text_field :two_title, class: 'form' %>
+      </div>  
+      <div class="field">
+        <%= f.label :"写真", class: 'label-title' %>
+        <%= f.file_field :two_image,class: 'label-title' %>
       </div>
       <%= f.submit "追加する" %>
 <% end %>
-
+</div>

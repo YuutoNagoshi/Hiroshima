@@ -1,28 +1,30 @@
 <button type="button" class="btn btn-secondary"><%= link_to "一覧に戻る", folders_path %></button>
-
+<div class="new">
 <%= form_for @folder do |f| %>
     <div class="field">
-      <%= f.label :folder %>
-      <%= f.text_field :folder, :size => 140 %>
+      <%= f.label :"講義名", class: 'label-title' %>
+      <%= f.text_field :folder,class: 'form' %>
     </div>
     <%= f.submit "追加する" %>
   <% end %>
 
   <%= form_for @sheet do |f| %>
     <div class="field">
-      <%= f.label :title %>
-      <%= f.text_field :title, :size => 140 %>
-      <%= f.label :image %>
-      <%= f.file_field :image %>
+      <%= f.label :"タイトル",  class: 'label-title' %>
+      <%= f.text_field :title,class: 'form2'%>
+    </div>  
+    <div class="field">
+    <%= f.label :"写真",  class: 'label-title' %>
+    <%= f.file_field :image,  class: 'label-title' %>
     </div>
     <%= f.submit "追加する" %>
   <% end %>
 
   <%= form_for @link do |f| %>
     <div class="field">
-      <%= f.label :link %>
-      <%= f.text_field :link, :size => 140 %>
+      <%= f.label :link,  class: 'label-title' %>
+      <%= f.text_field :link,class: 'form' %>
     </div>
     <%= f.submit "追加する" %>
   <% end %>
-
+</div>

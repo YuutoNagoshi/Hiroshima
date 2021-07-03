@@ -9,7 +9,7 @@
             <div class="card text-white mb-3" style="max-width: 18rem;">
             <div class="card-body">
               <h5 class="card-title"><%= t.folder %></h5>
-              <button type="button" class="btn btn-secondary"><%= link_to "詳細", folder_path(t.id) %></button> 
+              <%= link_to "詳細", folder_path(t.id),class: 'btn' %>
             </div>
             </div>
           </div>
