@@ -20,7 +20,9 @@
                 <div class="card-body">    
                 <h5 class="card-title"><%= t.three_title %></h5>
                 <%= t.three_body %>
-                <%= image_tag t.three_image_url, size: "250x200" if t.three_image? %>
+                <%= link_to t.three_image_url, "data-lightbox": t.three_image_url do %>
+                <%= image_tag t.three_image_url, size: "250x200", class:"img"%>
+                <% end %>
                 </div>
               </div>
             </div>

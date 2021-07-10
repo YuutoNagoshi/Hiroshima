@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-secondary"><%= link_to "新規投稿ページへ", new_folder_path %></button>
+<button type="button" class="btn btn-secondary"><%= link_to "作成する", new_folder_path %></button>
 
 <div class="folders-container">
   <div class="row">
@@ -10,6 +10,7 @@
             <div class="card-body">
               <h5 class="card-title"><%= t.folder %></h5>
               <%= link_to "詳細", folder_path(t.id),class: 'btn' %>
+              <%= button_to "削除", folder_path(t.id),class: 'button', method: :delete, data: { confirm: "削除しますか？" } %>
             </div>
             </div>
           </div>
@@ -29,7 +30,10 @@
             <div class="card-body">
               <h5 class="card-title"><%= t.title %></h5>
               <%= t.body %>
-              <%= image_tag t.image_url, size: "250x200" if t.image? %></h5>
+              <%= link_to t.image_url, "data-lightbox": t.image_url do %>
+              <%= image_tag t.image_url, size: "250x200", class:"img"%>
+              <% end %>
+              <%= button_to "削除", sheet_path(t.id),class: 'button', method: :delete, data: { confirm: "削除しますか？" } %>
             </div>
           </div>
       </div>

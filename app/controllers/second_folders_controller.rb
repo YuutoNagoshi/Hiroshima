@@ -8,18 +8,26 @@ class SecondFoldersController < ApplicationController
      else
        redirect_to new_folder_second_folder
      end
-   end
+  end
 
    
-   def new
+  def new
     @second_folder = SecondFolder.new
     @second_sheet = SecondSheet.new
-   end
+  end
 
-   def show
+  def show
     @second_folder = SecondFolder.find(params[:id])
     @third_sheets = ThirdSheet.where(second_folder_id: @second_folder.id, user_id: current_user.id)
-   end  
+  end  
+
+  def destroy
+    second_folder = SecondFolder.find(params[:id])
+    second_folder.destroy
+    redirect_back(fallback_location: root_path)
+
+  end 
+  
 
    private
 

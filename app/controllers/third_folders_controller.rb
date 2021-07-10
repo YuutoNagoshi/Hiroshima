@@ -19,6 +19,12 @@ class ThirdFoldersController < ApplicationController
       end
     end  
 
+    def destroy
+      third_folder = ThirdFolder.find(params[:id])
+      third_folder.destroy
+      redirect_back(fallback_location: root_path)
+    end 
+
     private
     
       def third_sheet_params

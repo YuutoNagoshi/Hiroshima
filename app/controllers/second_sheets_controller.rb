@@ -10,9 +10,17 @@ class SecondSheetsController < ApplicationController
     end
   end
     
-    def new
+  def new
       @second_sheet = SecondSheet.new
-    end
+  end
+
+  def destroy
+    second_sheet = SecondSheet.find(params[:id])
+    second_sheet.destroy
+    redirect_back(fallback_location: root_path)
+
+  end
+
     
   private
     

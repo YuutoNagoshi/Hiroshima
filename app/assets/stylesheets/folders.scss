@@ -35,13 +35,24 @@ a{
 }
 
 .btn {
-    padding: 10px 30px;
+    padding: 10px 50px;
     background-color: #333;
     color: #fff;
   }
   .btn:hover {
     background-color: #59b1eb;
   }
+
+  .button {
+    padding: 5px 20px;
+    background-color: rgb(112, 111, 111);
+    color: #fff;
+  }
+  .button:hover {
+    background-color: #d68d1f;
+  }
+
+
 
   .new{
       text-align: center;
@@ -56,4 +67,12 @@ a{
     width: 563px;
     margin-right: 10px;
     padding: 4px;
+}
+
+#new{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url("background31.jpg")
+      center / cover;
 }

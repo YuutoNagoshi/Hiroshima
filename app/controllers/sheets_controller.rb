@@ -15,6 +15,12 @@ class SheetsController < ApplicationController
        end 
     end
 
+    def destroy
+      sheet = Sheet.find(params[:id])
+      sheet.destroy
+      redirect_to folders_path
+    end 
+
     private
     def sheet_params
         params.require(:sheet).permit(:title, :body, :image)

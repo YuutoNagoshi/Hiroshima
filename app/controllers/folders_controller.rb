@@ -33,7 +33,15 @@ class FoldersController < ApplicationController
         @second_sheet = SecondSheet.new
         @second_sheets = SecondSheet.where(folder_id: @folder.id, user_id: @folder.user_id)
     end
-      private
+
+
+    def destroy
+      folder = Folder.find(params[:id])
+      folder.destroy
+      redirect_to action: :index
+    end
+     
+     private
     def folder_params
         params.require(:folder).permit(:folder)
     end
